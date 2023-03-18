@@ -1,0 +1,21 @@
+import java.util.*;
+class palindrome
+{
+    boolean isPalindrome()
+    {
+        int num,rev=0,copy;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("ENTER NUMBER: ");
+        num=sc.nextInt();
+        copy=num;
+        while(copy>0)
+        {
+            rev=rev*10+(copy%10);
+            copy/=10;
+        }
+        if(num==rev)
+        return true;
+        else
+        return false;
+    }
+}
